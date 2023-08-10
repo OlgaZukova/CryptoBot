@@ -6,15 +6,6 @@ from utils import ConvertionExeption, CryptoConverter
 
 bot = telebot.TeleBot(TOKEN)
 
-# @bot.message_handler(commands=["site", "website"])
-# def site(message):
-#     webbrowser.open("https://valuta.exchange/")
-
-# Обрабатываются все сообщения, содержащие команды '/start' or '/help'.
-# @bot.message_handler(commands=['start', 'main', 'Hello', 'hello', 'Hello!','hello!'])
-# def main(message):
-#     bot.send_message(message.chat.id, f"Привет! {message.from_user.first_name} {message.from_user.last_name}")
-
 @bot.message_handler(commands=['start', 'help'])
 def help(message:telebot.types.Message):
     text = 'Чтобы начать введите команду боту в следующем формате:\n<имя валюты>\
